@@ -24,10 +24,66 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene()
         
         // Set the scene to the view
         sceneView.scene = scene
+        
+        
+//        // シェイプ
+//        let textShape = SCNText(string: "つぶ", extrusionDepth: 1)
+//        textShape.flatness = 0.0
+//
+//        // パーティクルシステム
+//        let particle = SCNParticleSystem(named: "Rain.scnp", inDirectory: "")
+//        particle?.emitterShape = textShape
+//        let particleShapePosition = particle?.emitterShape?.boundingSphere.center
+//
+//        // ノードにパーティクルシステムをピボット変更後して紐付ける
+//        let particleNode = SCNNode()
+//        particleNode.pivot = SCNMatrix4MakeTranslation(particleShapePosition!.x, particleShapePosition!.y, 0)
+//        particleNode.addParticleSystem(particle!)
+//
+//        particleNode.position = SCNVector3(0, 0, -30)
+//
+//        scene.rootNode.addChildNode(particleNode)
+        
+        let floor = SCNFloor()
+        floor.firstMaterial?.diffuse.contents = UIColor.darkGray
+        floor.reflectivity = 0.0
+        
+        let floorNode = SCNNode(geometry: floor)
+        floorNode.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
+        scene.rootNode.addChildNode(floorNode)
+        
+        floorNode.position = SCNVector3(0, -1, 0)
+        
+        let emitter1 = SCNParticleSystem(named: "Rain.scnp", inDirectory: "")
+        let emitter2 = SCNParticleSystem(named: "Splash.scnp", inDirectory: "")
+        emitter2?.loops = false
+        
+        let plane = SCNPlane(width: 100, height: 100)
+//        plane.widthSegmentCount = 4
+//        plane.heightSegmentCount = 4
+//        plane.cornerSegmentCount = 4
+        plane.firstMaterial?.diffuse.contents = UIColor.black
+        emitter1?.emitterShape = plane
+        
+//        let particleNode = SCNNode(geometry: plane)
+        let particleNode = SCNNode()
+        particleNode.rotation = SCNVector4(1, 0, 0, Double.pi / 2 * 3)
+        particleNode.position = SCNVector3(0,30,-10)
+
+        particleNode.addParticleSystem(emitter1!)
+        
+        emitter1?.colliderNodes = [floorNode]
+        emitter1?.particleDiesOnCollision = true
+        
+        emitter1?.systemSpawnedOnCollision = emitter2
+        
+        scene.rootNode.addChildNode(particleNode)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

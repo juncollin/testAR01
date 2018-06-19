@@ -15,6 +15,10 @@
 		A3E1D42B20D9498B00EF2066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E1D42920D9498B00EF2066 /* LaunchScreen.storyboard */; };
 		A3E1D43620D9498B00EF2066 /* testAR01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1D43520D9498B00EF2066 /* testAR01Tests.swift */; };
 		A3E1D44120D9498B00EF2066 /* testAR01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1D44020D9498B00EF2066 /* testAR01UITests.swift */; };
+		A3E1D45020D94A0100EF2066 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E1D44E20D94A0100EF2066 /* spark.png */; };
+		A3E1D45120D94A0100EF2066 /* Rain.scnp in Resources */ = {isa = PBXBuildFile; fileRef = A3E1D44F20D94A0100EF2066 /* Rain.scnp */; };
+		A3E1D45320D94A9C00EF2066 /* Fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = A3E1D45220D94A9C00EF2066 /* Fire.scnp */; };
+		A3E1D45520D94DCF00EF2066 /* Splash.scnp in Resources */ = {isa = PBXBuildFile; fileRef = A3E1D45420D94DCF00EF2066 /* Splash.scnp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		A3E1D43C20D9498B00EF2066 /* testAR01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testAR01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E1D44020D9498B00EF2066 /* testAR01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAR01UITests.swift; sourceTree = "<group>"; };
 		A3E1D44220D9498B00EF2066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3E1D44E20D94A0100EF2066 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A3E1D44F20D94A0100EF2066 /* Rain.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Rain.scnp; sourceTree = "<group>"; };
+		A3E1D45220D94A9C00EF2066 /* Fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Fire.scnp; sourceTree = "<group>"; };
+		A3E1D45420D94DCF00EF2066 /* Splash.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Splash.scnp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +110,14 @@
 				A3E1D41E20D9498900EF2066 /* AppDelegate.swift */,
 				A3E1D42020D9498900EF2066 /* art.scnassets */,
 				A3E1D42220D9498900EF2066 /* ViewController.swift */,
+				A3E1D45420D94DCF00EF2066 /* Splash.scnp */,
+				A3E1D45220D94A9C00EF2066 /* Fire.scnp */,
 				A3E1D42420D9498900EF2066 /* Main.storyboard */,
 				A3E1D42720D9498B00EF2066 /* Assets.xcassets */,
 				A3E1D42920D9498B00EF2066 /* LaunchScreen.storyboard */,
 				A3E1D42C20D9498B00EF2066 /* Info.plist */,
+				A3E1D44E20D94A0100EF2066 /* spark.png */,
+				A3E1D44F20D94A0100EF2066 /* Rain.scnp */,
 			);
 			path = testAR01;
 			sourceTree = "<group>";
@@ -232,10 +244,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E1D45520D94DCF00EF2066 /* Splash.scnp in Resources */,
+				A3E1D45020D94A0100EF2066 /* spark.png in Resources */,
 				A3E1D42120D9498900EF2066 /* art.scnassets in Resources */,
 				A3E1D42B20D9498B00EF2066 /* LaunchScreen.storyboard in Resources */,
 				A3E1D42820D9498B00EF2066 /* Assets.xcassets in Resources */,
 				A3E1D42620D9498900EF2066 /* Main.storyboard in Resources */,
+				A3E1D45320D94A9C00EF2066 /* Fire.scnp in Resources */,
+				A3E1D45120D94A0100EF2066 /* Rain.scnp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
